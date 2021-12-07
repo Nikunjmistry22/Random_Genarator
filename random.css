@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aquamarine;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.btn{
+    padding: 1em;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: black;
+}
+h2{
+    padding: 0.1em;
+    position: fixed;
+    top: -15px;
+    right: 7px;
+    cursor: pointer;
+}
+h2 a{
+    text-decoration: none;
+}
+.btnchange{
+    background-color: white;
+}
+.change{
+    background-color: black;
+    color: white;
+}
+#name{
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 2%;   
+    flex-direction: column;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+input[type="submit"],.info,#check{
+    position: relative;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+label{
+    font-size: 18px;
+}

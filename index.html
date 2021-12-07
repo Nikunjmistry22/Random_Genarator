@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="Stylesheet" href="random.css">
+    
+</head>
+<body>
+    <div class="container">
+        <button class="btn" onclick="fun()"></button>
+        <h2><a href="https://github.com/Nikunjmistry22" target="_blank" rel="noopener noreferrer">Nikunj</a></h2>
+        <h1>Guess The Number</h1>
+  
+<p class="info">We have selected a random number between 1 - 100. 
+See if you can guess it.</p>
+  
+<div class="form">
+    <label for="guessField" >Enter a guess: </label>
+    <input type = "text" id = "guessField" class = "guessField">
+    <input type = "submit" value = "Submit guess" 
+           class = "guessSubmit" id = "submitguess">
+</div>
+<p id="check"></p>
+    </div>
+</body>
+<script>
+    function fun(){
+    let Btn = document.querySelector('.btn');
+        Btn.classList.toggle('btnchange');
+        document.body.classList.toggle('change');
+    }
+
+    var y = Math.floor(Math.random() * 100 + 1);
+    var guess = 1;
+    
+    document.getElementById("submitguess").onclick = function(){     
+     var x = document.getElementById("guessField").value;
+    
+     if(x == y)
+     {    
+        document.getElementById("check").innerHTML = "CONGRATULATIONS!! YOU GUESSED IT RIGHT IN "
+                 + guess + " GUESS ";
+        document.getElementById("check").style.color="green";
+        document.getElementById("check").style.fontWeight='bold';
+        
+     }
+     else if(x > y) 
+     {    
+         guess++;
+         //document.getElementById("check").innerHTML = "OOPS SORRY!! TRY A SMALLER NUMBER";
+         alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+        }
+        else
+        {
+            guess++;
+            //document.getElementById("check").innerHTML = "OOPS SORRY!! TRY A GREATER NUMBER";
+            alert("OOPS SORRY!! TRY A GREATER NUMBER");
+     }
+  }
+</script>
+</html>
